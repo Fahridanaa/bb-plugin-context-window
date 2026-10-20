@@ -1,12 +1,12 @@
 // bb-plugin-context-window — frontend entry.
 //
-// The report lives in a thread panel. BB's context popover is the entry point:
-// a content script adds a "Full breakdown" button, and a hidden thread header
-// action opens the panel when that button asks it to.
+// The report lives in a thread panel. BB's context control is the entry point:
+// hover opens BB's own popover, and a content script opens the panel on click
+// through a hidden thread-scoped action.
 
 import { definePluginApp, useBbNavigate } from "@get-bb/plugin-sdk/app";
 import { ContextPanel } from "./components/context/context-panel";
-import { mountContextPopoverAction } from "./content/context-popover";
+import { mountContextControlClick } from "./content/context-control";
 
 function OpenPanelBridge() {
   const navigate = useBbNavigate();
@@ -43,7 +43,7 @@ export default definePluginApp((app) => {
   });
 
   app.contentScripts.register({
-    id: "context-popover-action",
-    mount: mountContextPopoverAction,
+    id: "context-control-click",
+    mount: mountContextControlClick,
   });
 });

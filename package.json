@@ -1,6 +1,6 @@
 {
   "name": "bb-plugin-context-window",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "engines": {
     "bb": ">=0.46",
@@ -8,7 +8,7 @@
   },
   "bb": {
     "name": "Context window",
-    "description": "Open the full context breakdown from BB's context popover, with the total, category split, and sub-entries.",
+    "description": "Open the full context breakdown by clicking BB's context control, with the total, category split, and sub-entries.",
     "branding": {
       "icon": "Gauge"
     },
@@ -36,7 +36,7 @@
     "tailwind-merge": "^3.4.0",
     "typescript": "^5.7.0"
   },
-  "description": "Open a thread's full context breakdown from BB's context popover.",
+  "description": "Open a thread's full context breakdown by clicking BB's context control.",
   "license": "MIT",
   "author": "Fahridanaa",
   "repository": {
