@@ -6,9 +6,11 @@ See how a thread's context window is used, without leaving the thread.
 
 *The screenshot shortens the home directory path.*
 
-A meter in each thread header shows the percentage used. Click it to open a
-panel with the total, a stacked bar over the whole window, and every category
-with its tokens, share, and sub-entries.
+BB's context control in the composer shows the used percentage. Hover it to
+open the native summary. Click it to open a panel with the total, a stacked
+bar over the whole window, and every category with its tokens, share, and
+sub-entries. Click it again to close the panel. The native summary stays in
+place.
 
 ## Provider support
 
@@ -42,6 +44,9 @@ bb plugin install . --yes
 
 ## What it shows
 
+- A click on BB's context control opens the Context window panel in the
+  thread's side panel. A second click closes the panel. Hover still shows the
+  native summary.
 - Used and total tokens, percent used, and free space.
 - A stacked bar over the whole context window. Free space is the track.
 - Categories with tokens and share: system prompt, builtin tools, AGENTS.md
@@ -51,9 +56,7 @@ bb plugin install . --yes
 - An **Estimated split** label when the split is derived. The panel says what
   the estimate is based on.
 
-The meter opens the Context window panel in the thread's right panel. It shows
-a ring and the percentage in the header, and the percentage alone on compact
-viewports.
+The panel is also in the side panel's action launcher.
 
 ## Where the numbers come from
 

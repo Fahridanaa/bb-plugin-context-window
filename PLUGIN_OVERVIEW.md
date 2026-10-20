@@ -2,8 +2,8 @@ See how a thread's context window is used, without leaving the thread.
 
 ## What you get
 
-- A live meter in the thread header with the used percentage. Click it to open
-  the Context window panel.
+- The native context control in the composer. Hover it for BB's summary, and
+  click it for the full Context window panel. Click again to close the panel.
 - A full breakdown: total used, window size, percent used and left, a stacked
   bar over the whole window, and every category with its tokens and share.
 - Sub-entries where the provider or session file has them: system prompt
@@ -17,11 +17,12 @@ See how a thread's context window is used, without leaving the thread.
 
 ## How it works
 
-The plugin reads the context usage that BB already records for the thread. For
-providers that report a category snapshot, it shows that snapshot directly. For
-pi, it parses the provider session file and allocates the reported total across
-the parts of the prompt that are still in context. Nothing leaves the machine,
-and the plugin needs no account or API key.
+The plugin adds the click action to BB's context control. It reads the context
+usage that BB already records for the thread. For providers that report a
+category snapshot, it shows that snapshot directly. For pi, it parses the
+provider session file and allocates the reported total across the parts of the
+prompt that are still in context. Nothing leaves the machine, and the plugin
+needs no account or API key.
 
 ## Provider support
 

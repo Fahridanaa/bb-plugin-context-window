@@ -19,7 +19,7 @@ data exists — a category breakdown with sub-entries.
 ## Read the report
 
 - **Reported by the provider**: the agent sent a context snapshot. Category
-  counts are exact for that snapshot.
+  counts come from that snapshot.
 - **Estimated split**: pi reports only the used total. The plugin reads the pi
   session file (the system prompt sections, tool schemas, AGENTS.md files,
   skills, compaction summary, and messages still in context) and scales those
