@@ -10,6 +10,20 @@ A meter in each thread header shows the percentage used. Click it to open a
 panel with the total, a stacked bar over the whole window, and every category
 with its tokens, share, and sub-entries.
 
+## Provider support
+
+Only pi has a live test, on BB 0.46.1.
+
+| Provider | Data from BB 0.46.1 | What the plugin shows | Tested |
+| --- | --- | --- | --- |
+| pi | Used and window | Estimated split from the pi session file | Yes |
+| Claude Code | Category snapshot | The provider's split | No |
+| ACP (Cursor) | Used and window | Total only | No |
+| Codex | Used and window | Total only | No |
+
+The snapshot path does not depend on the provider. If a provider reports a
+category snapshot, the plugin shows it.
+
 ## Install
 
 BB 0.46 or newer is required.
@@ -45,7 +59,7 @@ viewports.
 
 | Source | Meaning |
 | --- | --- |
-| `provider` | The agent reported a context snapshot (ACP, Claude Code, Codex). Category counts are exact for that snapshot. |
+| `provider` | The agent reported a context snapshot. The panel shows the provider's categories. |
 | `estimated` | Pi reports only `usedTokens`. The plugin parses the pi session file for this thread (system prompt sections, tool schemas, AGENTS.md files, skills, compaction summary, and messages still in context), then scales those proportions to the reported total. Counts are estimates; proportions are useful. |
 | `none` | Only the used/window totals are known. The panel shows those and says a breakdown is not available. |
 

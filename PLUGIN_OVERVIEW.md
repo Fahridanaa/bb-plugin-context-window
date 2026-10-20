@@ -23,6 +23,13 @@ pi, it parses the provider session file and allocates the reported total across
 the parts of the prompt that are still in context. Nothing leaves the machine,
 and the plugin needs no account or API key.
 
+## Provider support
+
+Only pi has a live test, on BB 0.46.1. Claude Code reports a category
+snapshot, and the panel shows it. ACP (Cursor) and Codex report only the used
+total, so the panel shows the total and no breakdown. Any provider that reports
+a category snapshot gets the full breakdown.
+
 ## For agents
 
 The bundled skill explains `bb context-window show [thread-id] [--json]`, which
