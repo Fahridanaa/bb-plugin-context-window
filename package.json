@@ -1,0 +1,50 @@
+{
+  "name": "bb-plugin-context-window",
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "bb": ">=0.46",
+    "bbPluginSdk": ">=0.6.49"
+  },
+  "bb": {
+    "name": "Context window",
+    "description": "See how a thread's context window is used: a live meter in the header and a per-category token breakdown.",
+    "branding": {
+      "icon": "Gauge"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "bb plugin build"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.49",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.4.0",
+    "typescript": "^5.7.0"
+  },
+  "description": "See how a thread's context window is used: a live meter in the header and a per-category token breakdown.",
+  "license": "MIT",
+  "author": "Fahridanaa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fahridanaa/bb-plugin-context-window.git"
+  },
+  "homepage": "https://github.com/Fahridanaa/bb-plugin-context-window#readme",
+  "bugs": {
+    "url": "https://github.com/Fahridanaa/bb-plugin-context-window/issues"
+  }
+}
